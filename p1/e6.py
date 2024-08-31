@@ -12,35 +12,33 @@ In summary, this regular expression matches strings that represent an optional s
     re_str = r"^[+-]?[0-9]*[02468]$"
     return re.match(re_str, value) is not None
 
-
-
-
 def validate_b(value: str) -> bool:
-    return False
+    re_str = r"^[+-]?[1-9]*[02468]$"
+    return re.match(re_str, value) is not None
 
 
 def validate_c(value: str) -> bool:
-    return False
+    re_str = r"^[_a-zA-Z][_a-zA-Z0-9]*$"
+    return re.match(re_str, value) is not None
 
 
 def validate_d(value: str) -> bool:
-    return False
+    re_str = r"^a+bc+$"
+    return re.match(re_str, value) is not None
 
 
 def validate_e(value: str) -> bool:
-    return False
-
-
-def validate_g(value: str) -> bool:
-    return False
-
+    re_str = r"^(\b(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\b.?){4}\b$"
+    return re.match(re_str, value) is not None
 
 def validate_f(value: str) -> bool:
-    return False
+    re_str = r"^((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\b.?){4}(:(6553[0-5]|655[0-2]\d|65[0-4]\d{2}|6[0-4]\d{3}|[1-5]\d{4}|[1-9]\d{1,3}|\d))?\b$"
+    return re.match(re_str, value) is not None
 
 
 def validate_g(value: str) -> bool:
-    return False
+    re_str = r"^4(\d{15}|\d{12})\b$"
+    return re.match(re_str, value) is not None
 
 
 if __name__ == '__main__':
