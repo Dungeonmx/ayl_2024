@@ -142,7 +142,7 @@ def turing_machine(path: str, string: str, numb: int = 4, steps_enable: bool = F
     fp = automaton["F"]
 
     if fp == "":
-        steps_enable = Tru
+        steps_enable = True
 
     print(f"Comienzo")
     print_step(list_string, p, pos)
